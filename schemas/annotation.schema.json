@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/BigLamed/semantic-density-protocol/schemas/annotation.schema.json",
+  "title": "Semantic Density Observation",
+  "type": "object",
+  "required": [
+    "observation_id",
+    "text_id",
+    "protocol_version",
+    "status",
+    "lens",
+    "context_level",
+    "semantic_nodes",
+    "N",
+    "interpretation"
+  ],
+  "properties": {
+    "observation_id": {"type": "string", "minLength": 1},
+    "text_id": {"type": "string", "minLength": 1},
+    "protocol_version": {"type": "string"},
+    "status": {
+      "type": "string",
+      "enum": ["measured", "estimated", "illustrative_unmeasured", "historical"]
+    },
+    "lens": {
+      "type": "object",
+      "required": ["lens_id", "lens_type", "language"],
+      "properties": {
+        "lens_id": {"type": "string"},
+        "lens_type": {"type": "string", "enum": ["human", "language_model", "hybrid", "unknown"]},
+        "language": {"type": "string"},
+        "domain_familiarity": {"type": "string"},
+        "construct_familiarity": {"type": "string"},
+        "cultural_context": {"type": "string"},
+        "model_label": {"type": ["string", "null"]},
+        "observation_date": {"type": ["string", "null"], "format": "date"},
+        "instructions_summary": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "context_level": {
+      "type": "string",
+      "enum": ["none", "minimal", "full", "calibrated", "custom"]
+    },
+    "semantic_nodes": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "N": {"type": "integer", "minimum": 0},
+    "reading_seconds": {"type": ["number", "null"], "exclusiveMinimum": 0},
+    "reflection_seconds": {"type": ["number", "null"], "minimum": 0},
+    "E": {"type": ["number", "null"], "minimum": 0},
+    "D": {"type": ["number", "null"], "exclusiveMinimum": 0},
+    "P_observed": {"type": ["number", "null"], "minimum": 0},
+    "interpretation": {"type": "string"},
+    "interpretation_cluster": {"type": ["string", "null"]},
+    "uncertainty": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+    "notes": {"type": "string"}
+  },
+  "additionalProperties": false
+}
+

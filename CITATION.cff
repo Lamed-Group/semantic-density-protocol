@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use the Semantic Density Protocol, please cite this repository and the canonical Lamed Group methodology."
+title: "Semantic Density Protocol"
+type: software
+version: 0.1.0
+date-released: 2026-11-25
+authors:
+  - family-names: "Gorin"
+    given-names: "Alexander"
+    alias: "BigLamed"
+url: "https://www.lamedgroup.info/semantic-density-methodology/"
+repository-code: "https://github.com/BigLamed/semantic-density-protocol"
+license: Apache-2.0
+keywords:
+  - semantic density
+  - requisite variety
+  - cognitive annotation
+  - human-ai interaction
+  - semantic topology
+

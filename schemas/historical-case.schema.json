@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/BigLamed/semantic-density-protocol/schemas/historical-case.schema.json",
+  "title": "Historical Semantic Density Case",
+  "type": "object",
+  "required": [
+    "case_id",
+    "record_type",
+    "title",
+    "source_url",
+    "N",
+    "E",
+    "D",
+    "P_reported",
+    "calculation_check",
+    "method_version",
+    "calibration_status"
+  ],
+  "properties": {
+    "case_id": {"type": "string"},
+    "record_type": {"const": "historical"},
+    "title": {"type": "string"},
+    "construct_url": {"type": ["string", "null"], "format": "uri"},
+    "source_url": {"type": "string", "format": "uri"},
+    "N": {"type": "number", "minimum": 0},
+    "E": {"type": "number", "minimum": 0},
+    "D": {"type": "number", "exclusiveMinimum": 0},
+    "P_reported": {"type": "number", "minimum": 0},
+    "calculation_check": {"type": "number", "minimum": 0},
+    "timing_method": {"type": "string"},
+    "dispersion_method": {"type": "string"},
+    "method_version": {"type": "string"},
+    "calibration_status": {"type": "string"},
+    "notes": {"type": "string"}
+  },
+  "additionalProperties": false
+}
+

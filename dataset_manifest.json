@@ -1,0 +1,23 @@
+{
+  "name": "semantic-density-protocol",
+  "version": "0.1.0",
+  "author": "Alexander Gorin / Lamed Group",
+  "canonical_source": "https://www.lamedgroup.info/semantic-density-methodology/",
+  "license": {
+    "code": "Apache-2.0",
+    "documentation_and_original_annotations": "CC-BY-4.0",
+    "third_party_texts": "not relicensed"
+  },
+  "files": {
+    "pilot_texts": "data/pilot/texts.jsonl",
+    "pilot_annotations": "data/pilot/annotations.jsonl",
+    "historical_cases": "data/historical/site_cases.jsonl"
+  },
+  "counts": {
+    "pilot_texts": 3,
+    "pilot_annotations": 3,
+    "historical_cases": 6
+  },
+  "status": "experimental pilot; not a calibrated benchmark"
+}
+

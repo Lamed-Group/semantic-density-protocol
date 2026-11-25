@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/BigLamed/semantic-density-protocol/schemas/text.schema.json",
+  "title": "Semantic Density Construct",
+  "type": "object",
+  "required": ["text_id", "language", "text", "source_type", "license_status"],
+  "properties": {
+    "text_id": {"type": "string", "minLength": 1},
+    "language": {"type": "string", "minLength": 2},
+    "text": {"type": "string"},
+    "context": {"type": "string"},
+    "source_type": {
+      "type": "string",
+      "enum": ["original", "public_domain", "licensed", "quoted_excerpt", "unknown"]
+    },
+    "source_url": {"type": ["string", "null"], "format": "uri"},
+    "license_status": {"type": "string"},
+    "notes": {"type": "string"}
+  },
+  "additionalProperties": false
+}
+
